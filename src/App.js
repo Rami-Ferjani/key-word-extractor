@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Box } from "@chakra-ui/react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import TextInput from "./components/TextInput";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      bg="blue.600"
+      color="white"
+      height="100vh"
+      paddingTop={130}
+      overflow="scroll"
+    >
+      <Container maxW="3xl" centerContent>
+        <Header />
+        <TextInput />
+        <TextInput />
+        <Footer />
+      </Container>
+    </Box>
   );
-}
+};
 
 export default App;
