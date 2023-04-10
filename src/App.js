@@ -16,7 +16,6 @@ const App = () => {
       <Container maxW="3xl" centerContent>
         <Header />
         <TextInput />
-        <TextInput />
         <Footer />
       </Container>
     </Box>
