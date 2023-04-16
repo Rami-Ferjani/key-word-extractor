@@ -18,7 +18,7 @@ const TextInput = ({extractKeywords}) => {
        extractKeywords(text);
     }
   };
-  https://youtu.be/jJNPPP2YEdM?t=1311
+  
 
   return (
     <>

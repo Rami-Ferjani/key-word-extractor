@@ -3,11 +3,13 @@ import { Container, Box } from "@chakra-ui/react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TextInput from "./components/TextInput";
-
+import { useState } from "react";
 const App = () => {
-  const extractKeywords=(text) =>{
-     console.log(text);
-  }
+  const [keywords, setKeywords] = useState("");
+  const [isOpen, setisOpen] = useState("");
+  const extractKeywords = (text) => {
+    console.log(text);
+  };
   return (
     <Box
       bg="blue.600"
@@ -18,7 +20,7 @@ const App = () => {
     >
       <Container maxW="3xl" centerContent>
         <Header />
-        <TextInput extractKeywords={extractKeywords}/>
+        <TextInput extractKeywords={extractKeywords} />
         <Footer />
       </Container>
     </Box>
