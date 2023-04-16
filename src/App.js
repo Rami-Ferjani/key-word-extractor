@@ -6,9 +6,23 @@ import TextInput from "./components/TextInput";
 import { useState } from "react";
 const App = () => {
   const [keywords, setKeywords] = useState("");
-  const [isOpen, setisOpen] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const extractKeywords = (text) => {
-    console.log(text);
+    setLoading(true);
+    setIsOpen(true);
+
+    const options={
+      method: 'POST',
+      headers:{
+        'Content-Type':'application/json',
+        Authorization:`bearer ${import.meta.env.REACT_APP_KEY}`
+      },
+      body:JSON.stringify({
+        model:'text-davinci-003',
+        prompt:'Extract keywords from this text.Make the first letter of each word uppercase and separate with commas\n\n'+text+''
+      })
+    }
   };
   return (
     <Box
