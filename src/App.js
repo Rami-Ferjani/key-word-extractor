@@ -52,7 +52,6 @@ const App = () => {
         <Header />
         <TextInput extractKeywords={extractKeywords} />
         <Footer />
-        <Footer />
       </Container>
     </Box>
   );
