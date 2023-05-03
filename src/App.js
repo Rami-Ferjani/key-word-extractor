@@ -13,7 +13,7 @@ const App = () => {
     setIsOpen(true);
 
     const options = {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `bearer ${process.env.REACT_APP_KEY}`,
